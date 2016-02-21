@@ -27,11 +27,11 @@ class AboutStrings(Koan):
 
     def test_use_single_quotes_to_create_string_with_double_quotes(self):
         string = 'He said, "Go Away."'
-        self.assertEqual(True, string)
+        self.assertEqual(True, isinstance(string, str))
 
     def test_use_double_quotes_to_create_strings_with_single_quotes(self):
         string = "Don't"
-        self.assertEqual(True, string)
+        self.assertEqual(True, isinstance(string, str))
 
     def test_use_backslash_for_escaping_quotes_in_strings(self):
         a = "He said, \"Don't\""
@@ -48,7 +48,7 @@ It was the worst of times."
 Howdy,
 world!
 """
-        self.assertEqual(151, len(string))
+        self.assertEqual(15, len(string))
 
     def test_triple_quoted_strings_need_less_escaping(self):
         a = "Hello \"world\"."
